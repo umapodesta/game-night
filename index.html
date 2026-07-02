@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#090011" />
+  <title>Game Night Quest</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="stars"></canvas>
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+
+  <main class="app">
+    <section class="panel active" id="intro">
+      <div class="kicker">PRIVATE INVITE · 3 PLAYERS FOUND</div>
+      <h1>GAME<br><span>NIGHT</span><small>QUEST</small></h1>
+
+      <div class="photo-card" aria-label="Uma, Lulu and Nina at Game Night"></div>
+
+      <div class="players">
+        <div><span>PLAYER 1</span><strong>Uma Podesta</strong><b>✓</b></div>
+        <div><span>PLAYER 2</span><strong>Lulu Zivec</strong><b>✓</b></div>
+        <div><span>PLAYER 3</span><strong>Nina Pliauzer</strong><b>✓</b></div>
+      </div>
+
+      <button id="startBtn" class="btn">START QUEST</button>
+      <p class="micro">Sound starts after you tap.</p>
+    </section>
+
+    <section class="panel" id="quest">
+      <div class="kicker">MISSION</div>
+      <h2>Reach the finish line<br><span>to unlock the invite</span></h2>
+
+      <div class="board">
+        <div class="finish">🏁</div>
+        <div id="token" class="token">🎲</div>
+        <div id="tiles" class="tiles"></div>
+      </div>
+
+      <div id="message" class="message">Tap to move →</div>
+      <button id="moveBtn" class="btn">TAP TO MOVE</button>
+      <div class="bar"><i id="barFill"></i></div>
+    </section>
+
+    <section class="panel" id="reveal">
+      <div class="kicker win">MISSION COMPLETE</div>
+      <h1 class="invite">YOU'RE<br><span>INVITED</span></h1>
+      <div class="photo-card reveal-photo"></div>
+
+      <div class="details">
+        <div><span>📅</span><p><small>DATE</small><strong>Saturday, July 4</strong></p></div>
+        <div><span>🕣</span><p><small>TIME</small><strong>20:30 hs</strong></p></div>
+        <div><span>📍</span><p><small>LOCATION</small><strong>11 de Septiembre 1888, 1590</strong></p></div>
+        <div><span>🍷</span><p><small>UNLOCKED</small><strong>Wine included</strong></p></div>
+      </div>
+
+      <button id="acceptBtn" class="btn">COUNT ME IN</button>
+      <div id="achievement" class="achievement">🏆 Achievement unlocked: Best Game Night Ever</div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
